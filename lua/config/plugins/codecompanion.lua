@@ -60,5 +60,12 @@ return {
 			"<cmd>CodeCompanionChat Add<cr>",
 			{ noremap = true, silent = true, desc = "Add selection to chat buffer" }
 		)
+
+		vim.keymap.set(
+			"n",
+			"<leader>aa",
+			"<cmd>CodeCompanionActions<cr>",
+			{ noremap = true, silent = true, desc = "Code companion actions" }
+		)
 	end,
 }
