@@ -21,10 +21,11 @@ require("lazy").setup({
 	spec = {
 		{ import = "config.plugins" },
 		{
-			"nyoom-engineering/oxocarbon.nvim",
-			config = function()
-				vim.opt.background = "dark"
-				vim.cmd.colorscheme("oxocarbon")
+			"catppuccin/nvim",
+			name = "catppuccin",
+			priority = 1000,
+			init = function()
+				vim.cmd.colorscheme("catppuccin-mocha")
 			end,
 		},
 	},
