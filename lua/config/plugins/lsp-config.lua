@@ -89,6 +89,32 @@ return {
 			},
 		}
 
+		vim.diagnostic.config({
+			severity_sort = true,
+			float = { border = "rounded", source = "if_many" },
+			underline = { severity = vim.diagnostic.severity.ERROR },
+			signs = {
+				text = {
+					[vim.diagnostic.severity.ERROR] = "󰅚 ",
+					[vim.diagnostic.severity.WARN] = "󰀪 ",
+					[vim.diagnostic.severity.INFO] = "󰋽 ",
+					[vim.diagnostic.severity.HINT] = "󰌶 ",
+				},
+			},
+			virtual_text = {
+				source = "if_many",
+				spacing = 2,
+				format = function(diagnostic)
+					local diagnostic_message = {
+						[vim.diagnostic.severity.ERROR] = diagnostic.message,
+						[vim.diagnostic.severity.WARN] = diagnostic.message,
+						[vim.diagnostic.severity.INFO] = diagnostic.message,
+					}
+					return diagnostic_message[diagnostic.severity]
+				end,
+			},
+		})
+
 		require("mason").setup()
 
 		-- You can add other tools here that you want Mason to install
