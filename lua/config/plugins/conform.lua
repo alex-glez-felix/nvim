@@ -32,10 +32,10 @@ return {
 		end,
 		formatters_by_ft = {
 			lua = { "stylua" },
-			javascript = { "biome", "prettierd", "prettier", stop_after_first = true },
-			typescript = { "biome", "prettierd", "prettier", "biome", stop_after_first = true },
-			javascriptreact = { "biome", "prettierd", "prettier", "biome", stop_after_first = true },
-			typescriptreact = { "biome", "prettierd", "prettier", "biome", stop_after_first = true },
+			javascript = { "prettier", "prettierd", "biome", stop_after_first = true },
+			typescript = { "prettier", "biome", stop_after_first = true },
+			javascriptreact = { "prettier", "biome", stop_after_first = true },
+			typescriptreact = { "prettier", "biome", stop_after_first = true },
 		},
 	},
 }
