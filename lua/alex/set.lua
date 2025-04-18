@@ -19,8 +19,8 @@ vim.o.shiftwidth = 4
 
 vim.opt.signcolumn = 'yes'
 
-vim.opt.updatetime = 250
-vim.opt.timeoutlen = 250
+vim.opt.updatetime = 1000
+vim.opt.timeoutlen = 1000
 
 vim.opt.splitright = true
 vim.opt.splitbelow = true
