@@ -8,7 +8,7 @@ return {
   -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
   lazy = false,
   config = function()
-    oil = require("oil")
+    local oil = require("oil")
     -- @type oil.SetupOpts 
     oil.setup({})
     vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
