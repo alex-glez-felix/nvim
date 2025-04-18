@@ -19,17 +19,15 @@ vim.keymap.set("n", "<leader>y", '"+dpy')
 vim.keymap.set("v", "<leader>y", '"+dpy')
 vim.keymap.set("n", "<leader>Y", '"+dpY')
 
-vim.schedule(function()
-	vim.keymap.set("n", "<leader>Tv", function()
-		local current_config = vim.diagnostic.config().virtual_lines
-		local new_config
+vim.keymap.set("n", "<leader>Tv", function()
+	local current_config = vim.diagnostic.config().virtual_lines
+	local new_config
 
-		if current_config == true then
-			new_config = { current_line = true }
-		else
-			new_config = true
-		end
+	if current_config == true then
+		new_config = { current_line = true }
+	else
+		new_config = true
+	end
 
-		vim.diagnostic.config({ virtual_lines = new_config })
-	end, { desc = "Toggle diagnostic virtual_lines" })
-end)
+	vim.diagnostic.config({ virtual_lines = new_config })
+end, { desc = "Toggle diagnostic virtual_lines" })

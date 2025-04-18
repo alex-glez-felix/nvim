@@ -9,7 +9,9 @@ return {
 		scratch = { enabled = false },
 		indent = { enabled = false },
 		bigfile = { enabled = true },
-		dashboard = { enabled = true },
+		dashboard = {
+			enabled = true,
+		},
 		explorer = { enabled = true },
 		input = { enabled = true },
 		notifier = {
