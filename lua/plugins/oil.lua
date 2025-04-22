@@ -10,7 +10,12 @@ return {
     config = function()
         local oil = require("oil")
         -- @type oil.SetupOpts
-        oil.setup({})
+        oil.setup({
+            view_options = {
+                show_hidden = true,
+            },
+            skip_confirm_for_simple_edits = true,
+        })
         vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
     end,
 }
