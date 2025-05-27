@@ -8,14 +8,8 @@ return {
     },
     config = function()
         local neogit = require("neogit")
-        neogit.setup({
-            graph_style = "unicode",
-            integrations = {
-                telescope = false,
-                diffview = true,
-                snacks = true,
-            },
-        })
+
+        neogit.setup({})
 
         vim.keymap.set("n", "<leader>gn", function()
             neogit.open()
