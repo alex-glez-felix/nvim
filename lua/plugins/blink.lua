@@ -1,6 +1,6 @@
 return { -- Autocompletion
     "saghen/blink.cmp",
-    event = "VimEnter",
+    event = "InsertEnter", -- Only load when you start typing
     version = "1.*",
     dependencies = {
         -- Snippet Engine

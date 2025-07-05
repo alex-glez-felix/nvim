@@ -8,7 +8,7 @@ return {
         { "williamboman/mason.nvim", opts = {} },
         "williamboman/mason-lspconfig.nvim",
         "WhoIsSethDaniel/mason-tool-installer.nvim",
-
+        event = { "BufReadPre", "BufNewFile" }, -- Load on opening a file
         -- Useful status updates for LSP.
         { "j-hui/fidget.nvim", opts = {} },
 
