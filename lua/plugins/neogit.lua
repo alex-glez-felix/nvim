@@ -3,8 +3,14 @@ return {
     dependencies = {
         "nvim-lua/plenary.nvim", -- required
         "sindrets/diffview.nvim", -- optional - Diff integration
-
         "folke/snacks.nvim", -- optional
+    },
+    keys = {
+        { "<leader>gn", desc = "[g]it [n]eo" },
+        { "<leader>gc", desc = "[g]it [c]commit" },
+        { "<leader>gP", desc = "[g]it [P]ush" },
+        { "<leader>gp", desc = "[g]it [p]ull" },
+        { "<leader>gs", desc = "[g]it [s]tash" },
     },
     config = function()
         local neogit = require("neogit")
