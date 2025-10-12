@@ -22,10 +22,10 @@ return {
 
             go = { "gofumt", lsp_format = "fallback" },
             -- Conform will run the first available formatter
-            javascript = { "prettier", "prettierd", "biome", stop_after_first = true },
-            typescript = { "prettier", "prettierd", "biome", stop_after_first = true },
-            javascriptreact = { "prettier", "prettierd", "biome", stop_after_first = true },
-            typescriptreact = { "prettier", "prettierd", "biome", stop_after_first = true },
+            javascript = { "biome", "prettier", stop_after_first = true },
+            typescript = { "biome", "prettier", stop_after_first = true },
+            javascriptreact = { "biome", "prettier", stop_after_first = true },
+            typescriptreact = { "biome", "prettier", stop_after_first = true },
         },
         format_on_save = {
             -- These options will be passed to conform.format()
