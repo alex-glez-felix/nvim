@@ -1,5 +1,6 @@
 return {
     "nvim-treesitter/nvim-treesitter",
+    branch = "master",
     build = ":TSUpdate",
     dependencies = { "OXY2DEV/markview.nvim" },
     lazy = false,
@@ -16,6 +17,7 @@ return {
             "query",
             "vim",
             "vimdoc",
+            "typescript",
         },
         auto_install = true,
         highlight = {
